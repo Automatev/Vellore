@@ -320,10 +320,10 @@ function Farecalculator(){
         if(checkhostel.checked == true){
             if((pickupaddress.value == "VIT Main Gate" && dropaddress.value == "Katpadi railway station")||(pickupaddress.value == "Katpadi railway station" && dropaddress.value == "VIT Main Gate")){
                 if(peoplekat > 2){
-                    let people2 = ((peoplekat-2)*50) + 175 + 50;
+                    let people2 = ((peoplekat-2)*50) + 175 + 50+25;
                     document.getElementById("mainfare").innerHTML=people2;
                 }else{
-                    document.getElementById("mainfare").innerHTML=225;
+                    document.getElementById("mainfare").innerHTML=225+25;
                 }
             }
 
@@ -596,10 +596,10 @@ function Farecalculator(){
         else{
             if((pickupaddress.value == "VIT Main Gate" && dropaddress.value == "Katpadi railway station")||(pickupaddress.value == "Katpadi railway station" && dropaddress.value == "VIT Main Gate")){
                 if(peoplekat > 2){
-                    let people2 = ((peoplekat-2)*50) + 125 + 50;
+                    let people2 = ((peoplekat-2)*50) + 150 + 50;
                     document.getElementById("mainfare").innerHTML=people2;
                 }else{
-                    document.getElementById("mainfare").innerHTML=175;
+                    document.getElementById("mainfare").innerHTML=200;
                 }
             }
 
@@ -872,10 +872,10 @@ function Farecalculator(){
         if(checkhostel.checked == true){
                 if((pickupaddress.value == "VIT Main Gate" && dropaddress.value == "Katpadi railway station")||(pickupaddress.value == "Katpadi railway station" && dropaddress.value == "VIT Main Gate")){
                     if(peoplekat > 2){
-                        let people2 = ((peoplekat-2)*50) + 125 + 50;
+                        let people2 = ((peoplekat-2)*50) + 150 + 50;
                         document.getElementById("mainfare").innerHTML=people2;
                     }else{
-                        document.getElementById("mainfare").innerHTML=175;
+                        document.getElementById("mainfare").innerHTML=200;
                     }
                 }
     
@@ -1147,10 +1147,10 @@ function Farecalculator(){
         else{
             if((pickupaddress.value == "VIT Main Gate" && dropaddress.value == "Katpadi railway station")||(pickupaddress.value == "Katpadi railway station" && dropaddress.value == "VIT Main Gate")){
                 if(peoplekat > 2){
-                    let people2 = ((peoplekat-2)*50) + 125 ;
+                    let people2 = ((peoplekat-2)*50) + 150 ;
                     document.getElementById("mainfare").innerHTML=people2;
                 }else{
-                    document.getElementById("mainfare").innerHTML=125;
+                    document.getElementById("mainfare").innerHTML=150;
                 }
             }
             if((pickupaddress.value == "VIT Main Gate" && dropaddress.value == "New Bus Stand")||(pickupaddress.value == "New Bus Stand" && dropaddress.value == "VIT Main Gate")){
@@ -1436,7 +1436,9 @@ var telegram_bot_id = "6352070321:AAGewrFM6oIcMIWRsh8rNFicP3xCM84CeWs";
             var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
             var yyyy = today.getFullYear();
             today = mm + '/' + dd + '/' + yyyy;
-            // time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            const d = new Date();
+            let time = d.getTime();
+            time = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
             pickupaddresstele = document.getElementById("pickuplistinp").value;
             dropaddresstele =document.getElementById("droplistinp").value;
             let checkhosteltele = document.getElementById("toggler-1");
